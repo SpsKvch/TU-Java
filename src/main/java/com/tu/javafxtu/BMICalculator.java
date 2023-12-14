@@ -8,8 +8,11 @@ public class BMICalculator {
     private static final double LBW_FIRST_CONSTANT = 1.07;
     private static final double LBW_SECOND_CONSTANT = 148;
 
-    public String calculateBMI(double height, double weight) {
-        double bmi = weight/Math.pow(height/100,2);
+    public double calculateBMI(double height, double weight) {
+        return weight/Math.pow(height/100,2);
+    }
+
+    public String getBMIMessage(double bmi) {
         if (bmi < 18.5) {
             return String.format("BMI is %.2f, you are underweight", bmi);
         } else if (bmi < 25) {
